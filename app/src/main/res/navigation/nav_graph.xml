@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/main">
+    <fragment
+        android:id="@+id/main"
+        android:name="com.example.education.Main"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_main_to_courses_mentor"
+            app:destination="@id/courses_mentor" />
+        <action
+            android:id="@+id/action_main_to_courses_guruh"
+            app:destination="@id/courses_guruh" />
+        <action
+            android:id="@+id/action_main_to_courses_kurs"
+            app:destination="@id/courses_kurs" />
+    </fragment>
+    <fragment
+        android:id="@+id/courses_kurs"
+        android:name="com.example.education.courses_fragment.Courses"
+        android:label="fragment_courses_kurs"
+        tools:layout="@layout/fragment_courses_kurs" >
+        <action
+            android:id="@+id/action_courses_kurs_to_info_kurs"
+            app:destination="@id/info_kurs" />
+        <action
+            android:id="@+id/action_courses_kurs_to_main"
+            app:destination="@id/main" />
+    </fragment>
+    <fragment
+        android:id="@+id/courses_guruh"
+        android:name="com.example.education.groups_fragment.Courses"
+        android:label="fragment_courses_guruh"
+        tools:layout="@layout/fragment_courses_guruh" >
+        <action
+            android:id="@+id/action_courses_guruh_to_main"
+            app:destination="@id/main" />
+        <action
+            android:id="@+id/action_courses_guruh_to_allGroups_guruh"
+            app:destination="@id/allGroups_guruh" />
+    </fragment>
+    <fragment
+        android:id="@+id/courses_mentor"
+        android:name="com.example.education.mentor_fragment.Courses"
+        android:label="fragment_courses_mentor"
+        tools:layout="@layout/fragment_courses_mentors" >
+        <action
+            android:id="@+id/action_courses_mentor_to_main"
+            app:destination="@id/main" />
+        <action
+            android:id="@+id/action_courses_mentor_to_all_mentors_mentor"
+            app:destination="@id/all_mentors_mentor" />
+    </fragment>
+    <fragment
+        android:id="@+id/info_kurs"
+        android:name="com.example.education.courses_fragment.Info"
+        android:label="fragment_info_kurs"
+        tools:layout="@layout/fragment_info_kurs" >
+        <action
+            android:id="@+id/action_info_kurs_to_add_student_kurs"
+            app:destination="@id/add_student_kurs" />
+        <action
+            android:id="@+id/action_info_kurs_to_courses_kurs"
+            app:destination="@id/courses_kurs" />
+    </fragment>
+    <fragment
+        android:id="@+id/add_student_kurs"
+        android:name="com.example.education.courses_fragment.AddStudent"
+        android:label="fragment_add_student_kurs"
+        tools:layout="@layout/fragment_add_student_kurs" >
+        <action
+            android:id="@+id/action_add_student_kurs_to_info_kurs"
+            app:destination="@id/info_kurs" />
+    </fragment>
+    <fragment
+        android:id="@+id/all_mentors_mentor"
+        android:name="com.example.education.mentor_fragment.Mentors"
+        android:label="fragment_mentors_mentor"
+        tools:layout="@layout/fragment_mentors_mentor" >
+        <action
+            android:id="@+id/action_all_mentors_mentor_to_courses_mentor"
+            app:destination="@id/courses_mentor" />
+        <action
+            android:id="@+id/action_all_mentors_mentor_to_addMentor_mentor"
+            app:destination="@id/addMentor_mentor" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMentor_mentor"
+        android:name="com.example.education.mentor_fragment.AddMentor"
+        android:label="fragment_add_mentor_mentors"
+        tools:layout="@layout/fragment_add_mentor_mentors" >
+        <action
+            android:id="@+id/action_addMentor_mentor_to_all_mentors_mentor"
+            app:destination="@id/all_mentors_mentor" />
+    </fragment>
+    <fragment
+        android:id="@+id/allGroups_guruh"
+        android:name="com.example.education.groups_fragment.AllGroups"
+        android:label="fragment_all_groups_guruh"
+        tools:layout="@layout/fragment_all_groups_guruh" >
+        <action
+            android:id="@+id/action_allGroups_guruh_to_group_guruh"
+            app:destination="@id/group_guruh" />
+        <action
+            android:id="@+id/action_allGroups_guruh_to_addGroup_guruh"
+            app:destination="@id/addGroup_guruh" />
+        <action
+            android:id="@+id/action_allGroups_guruh_to_courses_guruh"
+            app:destination="@id/courses_guruh" />
+    </fragment>
+    <fragment
+        android:id="@+id/addGroup_guruh"
+        android:name="com.example.education.groups_fragment.AddGroup"
+        android:label="fragment_add_group_guruh"
+        tools:layout="@layout/fragment_add_group_guruh" >
+        <action
+            android:id="@+id/action_addGroup_guruh_to_allGroups_guruh"
+            app:destination="@id/allGroups_guruh" />
+    </fragment>
+    <fragment
+        android:id="@+id/group_guruh"
+        android:name="com.example.education.groups_fragment.Groups"
+        android:label="fragment_group_guruh"
+        tools:layout="@layout/fragment_group_guruh" >
+        <action
+            android:id="@+id/action_group_guruh_to_addStudent_guruh"
+            app:destination="@id/addStudent_guruh" />
+        <action
+            android:id="@+id/action_group_guruh_to_editStudent_guruh"
+            app:destination="@id/editStudent_guruh" />
+    </fragment>
+    <fragment
+        android:id="@+id/addStudent_guruh"
+        android:name="com.example.education.groups_fragment.AddStudent"
+        android:label="fragment_add_student_guruh"
+        tools:layout="@layout/fragment_add_student_guruh" >
+        <action
+            android:id="@+id/action_addStudent_guruh_to_group_guruh"
+            app:destination="@id/group_guruh" />
+    </fragment>
+    <fragment
+        android:id="@+id/editStudent_guruh"
+        android:name="com.example.education.groups_fragment.EditStudent"
+        android:label="fragment_edit_student_guruh"
+        tools:layout="@layout/fragment_edit_student_guruh" >
+        <action
+            android:id="@+id/action_editStudent_guruh_to_group_guruh"
+            app:destination="@id/group_guruh" />
+    </fragment>
+</navigation>
